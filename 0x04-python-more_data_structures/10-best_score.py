@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-def multiply_by_2(a_dictionary):
-    d = dict()
-    for i, j in a_dictionary.items():
-        d[i] = j * 2
-    return(d)
+def best_score(a_dictionary):
+    if not a_dictionary:
+        return None
+    else:
+        return max(a_dictionary, key = a_dictionary.get)
