@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const SquareClass = require('./5-square.js');
+const SquareClass = require('./4-square.js');
 
 class Square extends SquareClass {
   constructor (size) {
