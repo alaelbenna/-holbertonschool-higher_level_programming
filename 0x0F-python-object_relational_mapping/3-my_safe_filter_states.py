@@ -12,11 +12,11 @@ from sys import argv
 if __name__ == "__main__":
 
     db = MySQLdb.connect(
-            host="localhost",
-            port=3306,
-            user=argv[1],
-            password=argv[2],
-            database=argv[3],
+        host="localhost",
+        port=3306,
+        user=argv[1],
+        password=argv[2],
+        database=argv[3],
 
     )
     cursor = db.cursor()
@@ -25,5 +25,5 @@ if __name__ == "__main__":
     results = cursor.fetchall()
     for row in results:
         print(row)
-        cursor.close()
-        db.close()
+    cursor.close()
+    db.close()
