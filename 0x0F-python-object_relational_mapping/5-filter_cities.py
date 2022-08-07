@@ -4,12 +4,13 @@ script that takes in the name of a
 state as an argument and lists all cities of that state
 """
 
+
 import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
 
-      db = MySQLdb.connect(
+    db = MySQLdb.connect(
         host="localhost",
         port=3306,
         user=argv[1],
@@ -17,7 +18,7 @@ if __name__ == "__main__":
         database=argv[3],
 
     )
-    cursor =db.cursor()
+    cursor = db.cursor()
     sql = """SELECT cities.name
             FROM cities
             JOIN states
@@ -29,7 +30,7 @@ if __name__ == "__main__":
     if results == ():
         print("")
     else:
-        for i in range(len(results))
+        for i in range(len(results)):
             if i == len(results)-1:
                 print(results[i][0])
             else:
